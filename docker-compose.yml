@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  customer-service:
+    build: ./customer-service
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./shared:/app/shared
+    restart: always
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./shared:/app/shared
+    restart: always
+
+  restaurant-service:
+    build: ./restaurant-service
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./shared:/app/shared
+    restart: always
