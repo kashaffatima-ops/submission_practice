@@ -12,3 +12,7 @@ jobs:
 
     steps:
     - echo "Building Docker images..."
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    
